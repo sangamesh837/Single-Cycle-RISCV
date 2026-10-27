@@ -10,7 +10,7 @@
 #      params: {WIDTH: your_param}
 #    See the assignment handout for an example.
 yaml_version: 1
-stage: fetch
+stage: system
 
 modules:
   flopr:       {source_files: [Resettable_FF/rtl.sv]}
@@ -21,9 +21,9 @@ modules:
   regfile:     {source_files: [Register_File/rtl.sv]}
   extend:      {source_files: [Sign_Extender/rtl.sv]}
   maindec:     {source_files: [Main_Decoder/rtl.sv]}
-  aludec:      {source_files: [ALU_Decoder/rtl.sv]}
+  aludec:      {source_files: [ALU_Decoder/aludec]}
   controller:  {source_files: [Control_Unit/rtl.sv]}
-  alu:         {source_files: [ALU/rtl.sv]}
+  alu:         {source_files: [ALU/alu.sv]}
   mux3:        {source_files: [3to1_Multiplexer/mux3.sv]}
   datapath:    {source_files: [Datapath/rtl.sv]}
   riscvsingle: {source_files: [RISCV_Wrapper/rtl.sv]}
